@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.Pages.Page5" 
+             BackgroundColor="White"
+             Title="AnimateScroll">
+  <StackLayout Spacing="0" Padding="0">
+    
+    <!--Menu-->
+    <StackLayout Spacing="0" Padding="0">
+      <Grid Padding="0" BackgroundColor="#5BAFFF">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="*" />
+          <ColumnDefinition Width="*" />
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" BackgroundColor="#5BAFFF" Padding="0">
+          <StackLayout Padding="10">
+            <Label
+              Text="All" FontSize="15" FontAttributes="Bold"
+              TextColor="White"
+              HorizontalOptions="Center" VerticalOptions="Center" />
+          </StackLayout>
+          <BoxView x:Name="BoxView_1"
+            HeightRequest="3" BackgroundColor="#5BFFA0"
+            HorizontalOptions="Fill" VerticalOptions="EndAndExpand"
+            Opacity="0"/>
+          <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="Menu1_OnTapped" />
+          </Grid.GestureRecognizers>
+        </Grid>
+
+        <Grid Grid.Column="1" BackgroundColor="#5BAFFF" Padding="0">
+          <StackLayout Padding="10">
+            <Label
+              TextColor="White"
+              Text="Done" FontSize="15" FontAttributes="Bold"
+              HorizontalOptions="Center" VerticalOptions="Center" />
+          </StackLayout>
+          <BoxView x:Name="BoxView_2"
+            HeightRequest="3" BackgroundColor="#5BFFA0"
+            HorizontalOptions="Fill" VerticalOptions="EndAndExpand"
+            Opacity="0"/>
+          <Grid.GestureRecognizers>
+            <TapGestureRecognizer Tapped="Menu2_OnTapped" />
+          </Grid.GestureRecognizers>
+        </Grid>
+      </Grid>
+    </StackLayout>
+    
+    <!--Main ScrollView-->
+    <ScrollView HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="15">
+      
+      <StackLayout x:Name="MainLayout" Orientation="Vertical" Spacing="30" />
+      
+    </ScrollView>
+  </StackLayout>
+  
+</ContentPage>

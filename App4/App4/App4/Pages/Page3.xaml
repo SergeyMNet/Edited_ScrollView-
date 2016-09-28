@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:App4.Controls;assembly=App4"
+             x:Class="App4.Pages.Page3"
+             BackgroundColor="White" Title="Droping">
+  <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+    <Grid.RowDefinitions>
+      <RowDefinition Height="*" />
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+      <ColumnDefinition Width="*" />
+    </Grid.ColumnDefinitions>
+
+
+    <controls:CircleImage x:Name="Earth" Source="earthimage.png" BorderColor="Blue" BorderThickness="0"
+                          HorizontalOptions="CenterAndExpand"
+                          VerticalOptions="CenterAndExpand"
+                          HeightRequest="100" WidthRequest="100" Aspect="AspectFit">
+      <controls:CircleImage.GestureRecognizers>
+        <TapGestureRecognizer Command="{Binding ClickCommand}"></TapGestureRecognizer>
+      </controls:CircleImage.GestureRecognizers>
+    </controls:CircleImage>
+    
+  </Grid>
+</ContentPage>

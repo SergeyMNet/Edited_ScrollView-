@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:App4.Controls;assembly=App4"
+             x:Class="App4.App">
+  <Application.Resources>
+    <ResourceDictionary>
+
+    <DataTemplate x:Key="ItemTemplate">
+      <controls:FrameTouchListner
+          ItemId="{Binding Id}"
+          StatusItem="{Binding Status}"
+          WorkflowItem="{Binding Workflow}"
+          IsVisible="{Binding IsVisible}"
+          IsChecked="{Binding }"
+          HasShadow="True" HeightRequest="{Binding HeightRow}"
+          BackgroundColor="{Binding ColorRow}" VerticalOptions="Start">
+        <Grid>
+          <Label Text="{Binding Title}" TextColor="White" FontSize="30" FontAttributes="Bold" 
+                 HorizontalOptions="Center" VerticalOptions="Center" />
+          <BoxView Color="White" HeightRequest="3" WidthRequest="100" 
+                   HorizontalOptions="Center" VerticalOptions="Center" IsVisible="{Binding IsDone}" />
+          <Grid.GestureRecognizers>
+            <TapGestureRecognizer Command="{Binding Tapped}" NumberOfTapsRequired="2" />
+          </Grid.GestureRecognizers>
+        </Grid>
+      </controls:FrameTouchListner>
+    </DataTemplate>
+      
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>

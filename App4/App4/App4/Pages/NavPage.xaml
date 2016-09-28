@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App4.Pages.NavPage"
+             BackgroundColor="Silver" Title="Menu">
+  <StackLayout HorizontalOptions="Center" VerticalOptions="Center"
+               Orientation="Vertical" Spacing="20" Padding="20">
+    
+    <Button Text="All" Clicked="Button1_OnClicked" HorizontalOptions="FillAndExpand" BackgroundColor="White" TextColor="Black" />
+    <Button Text="DropimgAnywere" Clicked="Button2_OnClicked" HorizontalOptions="FillAndExpand" BackgroundColor="White" TextColor="Black" />
+    <Button Text="Droping" Clicked="Button3_OnClicked" HorizontalOptions="FillAndExpand" BackgroundColor="White" TextColor="Black" />
+    <Button Text="FlyByCircleEarth" Clicked="Button4_OnClicked" HorizontalOptions="FillAndExpand" BackgroundColor="White" TextColor="Black" />
+    <Button Text="AnimateScroll" Clicked="Button5_OnClicked" HorizontalOptions="FillAndExpand" BackgroundColor="White" TextColor="Black" />
+
+  </StackLayout>
+</ContentPage>

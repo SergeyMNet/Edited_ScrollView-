@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:controls="clr-namespace:App4.Controls;assembly=App4"
+             x:Class="App4.Pages.Page4" Title="FlyByCircleEarth">
+
+  
+  <Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+  <Grid.RowDefinitions>
+    <RowDefinition Height="100" />
+    <RowDefinition Height="*" />
+  </Grid.RowDefinitions>
+  <Grid.ColumnDefinitions>
+    <ColumnDefinition Width="*" />
+  </Grid.ColumnDefinitions>
+
+    <StackLayout Grid.Row="0" Orientation="Horizontal" Spacing="10" Padding="10">
+      <Button Text="Rotate" Clicked="Button1_OnClicked" HorizontalOptions="FillAndExpand" />
+      <Button Text="Fly" Clicked="Button2_OnClicked" HorizontalOptions="FillAndExpand" />
+      <Button Text="Scale" Clicked="Button3_OnClicked" HorizontalOptions="FillAndExpand" />
+    </StackLayout>
+
+
+  <controls:CircleImage Grid.Row="1" x:Name="Earth" Source="earthimage.png" BorderColor="Blue" BorderThickness="0"
+                        HorizontalOptions="CenterAndExpand"
+                        VerticalOptions="CenterAndExpand"
+                        HeightRequest="100" WidthRequest="100" Aspect="AspectFit"/>
+
+  </Grid>
+
+</ContentPage>
